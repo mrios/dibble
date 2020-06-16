@@ -3,9 +3,11 @@ import { Breadcrumb } from 'antd';
 import { withRouter, Link } from 'react-router-dom';
 import { pathToRegexp } from 'path-to-regexp';
 import { getBreadcrumbNameMap } from '../app-config/BreadcrumbNameMap';
+import { useTranslation } from 'react-i18next';
 
 const BreadcrumbApp = withRouter((props: any) => {
   const { location } = props;
+  const { t } = useTranslation();
   const breadcrumbNameMap = getBreadcrumbNameMap();
   const pathSnippets = location.pathname.split('/').filter((i: any) => i);
 
@@ -25,7 +27,7 @@ const BreadcrumbApp = withRouter((props: any) => {
 
   const breadcrumbItems = [
     <Breadcrumb.Item key="/">
-      <Link to="/">Home</Link>
+      <Link to="/">{t('breadcrumb:home')}</Link>
     </Breadcrumb.Item>,
   ].concat(extraBreadcrumbItems);
 

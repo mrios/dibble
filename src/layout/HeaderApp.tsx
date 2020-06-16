@@ -23,6 +23,11 @@ const HeaderApp = () => {
         }
       )}
       <BreadcrumbApp />
+      <div className="user-controls">
+        <Dropdown.Button overlay={menuLang}>
+          <Link to="logout">{t('header:sign_out')}</Link>
+        </Dropdown.Button>
+      </div>
     </Header>
   );
 };
