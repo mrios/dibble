@@ -1,6 +1,7 @@
 import React, { createContext, useReducer } from 'react';
 
 export const TOGGLE_MENU = 'TOGGLE_MENU';
+export const CHANGE_LANG = 'CHANGE_LANG';
 
 export interface ActionType {
   type: string;
@@ -11,12 +12,14 @@ export type InitialStateAppType = {
   isCollapsed: boolean;
   hasLogoImage: boolean;
   siderWidth: number;
+  appLang: string;
 };
 
 const initialState = {
   isCollapsed: false,
   hasLogoImage: false,
   siderWidth: 210,
+  appLang: 'en',
 };
 
 const AppContext = createContext<{
