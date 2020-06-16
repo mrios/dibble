@@ -1,0 +1,47 @@
+@import './../custom-fonts.less';
+@import './../custom-colors.less';
+
+.brand {
+  padding: @padding-md;
+  display: flex;
+  height: 63px;
+  align-items: center;
+  background: @green-2;
+  .logo {
+    flex: 1;
+    height: inherit;
+    background-image: url('/logo512.png');
+    background-size: 32px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .name {
+    flex: 2;
+    font-size: 20px;
+    color: @green-5;
+    .museo-semibold();
+  }
+  .anticon {
+    color: @blue-6;
+    font-size: 30px;
+    margin-right: @margin-md;
+  }
+}
+
+.ant-layout-sider-collapsed {
+  .brand {
+    .logo {
+      height: 32px;
+      background-image: url('/logo512.png');
+      background-size: 32px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    .name {
+      display: none;
+    }
+    .anticon {
+      font-size: 46px;
+    }
+  }
+}
