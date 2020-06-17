@@ -2,6 +2,7 @@
   "name": "dibble",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:9000",
   "dependencies": {
     "@craco/craco": "^5.6.4",
     "@datorama/akita": "^5.0.0",
