@@ -4,8 +4,10 @@
   "private": true,
   "proxy": "http://localhost:9000",
   "dependencies": {
+    "@ant-design/charts": "^0.9.6",
     "@craco/craco": "^5.6.4",
     "@datorama/akita": "^5.0.0",
+    "@mindspace-io/utils": "^1.1.2",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
@@ -52,5 +54,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "akitaCli": {
+    "template": "ts"
+  },
+  "devDependencies": {}
 }
