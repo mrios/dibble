@@ -1,14 +1,32 @@
 [
   {
-    "uid": "56d0149c-b3d0-4b84-8340-321afe999d3d",
-    "description": "Superadmin"
+    "id": "56d0149c",
+    "name": "Superadmin",
+    "description": "Superadmin",
+    "active": true,
+    "createdAt": "<Date>",
+    "createdBy": {
+      "id": "49ea6524"
+    }
   },
   {
-    "uid": "5cfc2049-ce63-4a8b-840f-5ac7d38e3ca1",
-    "description": "Admin"
+    "id": "5cfc2049",
+    "name": "Admin",
+    "description": "Admin",
+    "active": true,
+    "createdAt": "<Date>",
+    "createdBy": {
+      "id": "49ea6524"
+    }
   },
   {
-    "uid": "5935d2b0-56a7-4e94-81e5-cac2a6418324",
-    "description": "Guest"
+    "id": "5935d2b0",
+    "name": "Guest",
+    "description": "Guest",
+    "active": false,
+    "createdAt": "<Date>",
+    "createdBy": {
+      "id": "49ea6524"
+    }
   }
 ]

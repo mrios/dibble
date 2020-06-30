@@ -1,38 +1,44 @@
 [
   {
-    "uid": "49ea6524-fc05-41d6-b9b1-fd8cdce42d2c",
+    "id": "49ea6524",
     "username": "mrios.superadmin@dibble.tech",
-    "name": "Matias 1",
-    "lastname": "Rios",
+    "firstName": "Matias 1",
+    "lastName": "Rios",
+    "active": true,
     "createdAt": "<Date>",
-    "createdBy": "<Date>",
+    "createdBy": {
+      "id": "49ea6524"
+    },
     "role": {
-      "uid": "56d0149c-b3d0-4b84-8340-321afe999d3d",
-      "description": "Superadmin"
+      "id": "56d0149c"
     }
   },
   {
-    "uid": "2bd6cde1-1cb1-4327-bc3d-ca7314260cd4",
+    "id": "2bd6cde1",
     "username": "mrios.admin@dibble.tech",
-    "name": "Matias 2",
-    "lastname": "Rios",
+    "firstName": "Matias 2",
+    "lastName": "Rios",
+    "active": true,
     "createdAt": "<Date>",
-    "createdBy": "<Date>",
+    "createdBy": {
+      "id": "49ea6524"
+    },
     "role": {
-      "uid": "5cfc2049-ce63-4a8b-840f-5ac7d38e3ca1",
-      "description": "Admin"
+      "id": "5cfc2049"
     }
   },
   {
-    "uid": "7f539bfe-c0b6-485b-813c-0ccfd1586451",
+    "id": "7f539bfe",
     "username": "mrios.guest@dibble.tech",
-    "name": "Matias Guest",
-    "lastname": "Rios",
+    "firstName": "Matias Guest",
+    "lastName": "Rios",
+    "active": true,
     "createdAt": "<Date>",
-    "createdBy": "<Date>",
+    "createdBy": {
+      "id": "49ea6524"
+    },
     "role": {
-      "uid": "5935d2b0-56a7-4e94-81e5-cac2a6418324",
-      "description": "Guest"
+      "id": "5935d2b0"
     }
   }
 ]

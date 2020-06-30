@@ -1,0 +1,323 @@
+{
+  "template": "on-demand",
+  "title": "Dashboard [demo-gallery]",
+  "appName": "Dibble",
+  "lang": "en",
+  "subtitle": "Template: On-demand",
+  "datasets": [
+    {
+      "order": 1,
+      "title": "Demo",
+      "rows": [
+        {
+          "cols": [
+            {
+              "title": "Title 1",
+              "span": 5,
+              "group": "counters",
+              "component": "ProgressCounter",
+              "card": {
+                "title": "Card transparent",
+                "transparent": true,
+                "hoverable": false,
+                "style": {
+                  "width": "100%",
+                  "textAlign": "center"
+                }
+              },
+              "data": {
+                "percent": 75,
+                "successPercent": 25,
+                "type": "circle"
+              }
+            },
+            {
+              "title": "Title 2",
+              "span": 5,
+              "group": "counters",
+              "component": "ProgressCounter",
+              "card": {
+                "title": "Card transparent hoverable",
+                "transparent": true,
+                "style": {
+                  "width": "100%",
+                  "textAlign": "center"
+                }
+              },
+              "data": {
+                "percent": 80,
+                "successPercent": 80,
+                "type": "dashboard"
+              }
+            },
+            {
+              "title": "Title 3",
+              "span": 5,
+              "group": "counters",
+              "component": "ProgressCounter",
+              "card": {
+                "title": "Counter card",
+                "transparent": true
+              },
+              "iterable": true,
+              "data": [
+                {
+                  "label": "Item 1",
+                  "percent": 25,
+                  "successPercent": 0,
+                  "type": "line"
+                },
+                {
+                  "label": "Item 2",
+                  "percent": 33.3,
+                  "successPercent": 0,
+                  "type": "line"
+                },
+                {
+                  "label": "Item 3",
+                  "percent": 20,
+                  "successPercent": 0,
+                  "type": "line"
+                },
+                {
+                  "label": "Item 4",
+                  "percent": 65,
+                  "successPercent": 0,
+                  "type": "line"
+                }
+              ]
+            },
+            {
+              "title": "Title 4",
+              "span": 9,
+              "group": "graphs",
+              "component": "LineGraph",
+              "data": {
+                "config": {
+                  "width": 350,
+                  "height": 200
+                }
+              },
+              "card": {
+                "title": "Line Graph",
+                "extra": "Info",
+
+                "hoverable": false
+              }
+            }
+          ]
+        },
+        {
+          "title": "Divider 3",
+          "span": 24,
+          "group": "dividers",
+          "component": "DividerDefault",
+          "data": {
+            "icon": 75,
+            "text": "Divider example",
+            "type": "horizontal",
+            "orientation": "left"
+          }
+        },
+        {
+          "cols": [
+            {
+              "title": "Users",
+              "span": 12,
+              "group": "tables",
+              "component": "TableDefault",
+              "card": {
+                "title": "Table Example",
+                "transparent": true,
+                "extra": "> Go to users list"
+              }
+            },
+            {
+              "title": "Graph 1",
+              "span": 12,
+              "group": "graphs",
+              "component": "LineGraph",
+              "card": {
+                "title": "Graph Example"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 2,
+      "title": "Counters",
+      "background": {
+        "type": "pattern",
+        "color": "#ffffff",
+        "url": "data:image/svg+xml,%3Csvg width='84' height='48' viewBox='0 0 84 48' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h12v6H0V0zm28 8h12v6H28V8zm14-8h12v6H42V0zm14 0h12v6H56V0zm0 8h12v6H56V8zM42 8h12v6H42V8zm0 16h12v6H42v-6zm14-8h12v6H56v-6zm14 0h12v6H70v-6zm0-16h12v6H70V0zM28 32h12v6H28v-6zM14 16h12v6H14v-6zM0 24h12v6H0v-6zm0 8h12v6H0v-6zm14 0h12v6H14v-6zm14 8h12v6H28v-6zm-14 0h12v6H14v-6zm28 0h12v6H42v-6zm14-8h12v6H56v-6zm0-8h12v6H56v-6zm14 8h12v6H70v-6zm0 8h12v6H70v-6zM14 24h12v6H14v-6zm14-8h12v6H28v-6zM14 8h12v6H14V8zM0 8h12v6H0V8z' fill='%235a5fea' fill-opacity='0.09' fill-rule='evenodd'/%3E%3C/svg%3E"
+      },
+      "rows": [
+        {
+          "cols": [
+            {
+              "title": "Title 1",
+              "span": 6,
+              "group": "counters",
+              "component": "ProgressCounter",
+              "data": {
+                "percent": 75,
+                "successPercent": 25,
+                "type": "circle"
+              }
+            },
+            {
+              "title": "Title 2",
+              "span": 6,
+              "group": "counters",
+              "component": "ProgressCounter",
+              "extra": "Info",
+              "data": {
+                "percent": 80,
+                "successPercent": 80,
+                "type": "dashboard"
+              }
+            },
+            {
+              "title": "Title 3",
+              "span": 6,
+              "group": "counters",
+              "component": "ProgressCounter",
+              "card": {
+                "title": "Counter card",
+                "extra": "View more ..."
+              },
+              "data": {
+                "percent": 25,
+                "successPercent": 0,
+                "type": "line"
+              }
+            },
+            {
+              "title": "Title 4",
+              "span": 6,
+              "group": "counters",
+              "component": "ProgressCounter",
+              "card": {
+                "title": "Counter card",
+                "extra": "Info",
+                "style": {
+                  "width": "100%",
+                  "textAlign": "center"
+                },
+                "hoverable": false
+              },
+              "data": {
+                "percent": 75,
+                "successPercent": 25,
+                "type": "circle"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "title": "Graphs",
+      "background": {
+        "type": "image",
+        "url": "https://png.pngtree.com/thumb_back/fw800/back_our/20190625/ourmid/pngtree-flat-solid-geometry-corporate-company-ppt-background-image_260522.jpg"
+      },
+      "rows": [
+        {
+          "cols": [
+            {
+              "title": "Graph 1",
+              "span": 12,
+              "group": "graphs",
+              "component": "LineGraph",
+              "card": {
+                "title": "Line Graph"
+              },
+              "data": {
+                "percent": 75,
+                "successPercent": 25,
+                "type": "circle"
+              }
+            },
+            {
+              "title": "Graph 2",
+              "span": 12,
+              "group": "graphs",
+              "component": "AreaGraph",
+              "card": {
+                "title": "Area Graph"
+              },
+              "data": {
+                "percent": 75,
+                "successPercent": 25,
+                "type": "circle"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 4,
+      "title": "Dividers",
+      "background": {
+        "type": "solid",
+        "color": "lightskyblue"
+      },
+      "rows": [
+        {
+          "cols": [
+            {
+              "title": "Divider 1",
+              "span": 24,
+              "group": "dividers",
+              "component": "DividerDefault",
+              "data": {
+                "icon": 75,
+                "text": "Text divider!",
+                "type": "horizontal"
+              }
+            },
+            {
+              "title": "Divider 2",
+              "span": 24,
+              "group": "dividers",
+              "component": "DividerDefault",
+              "data": {
+                "text": "",
+                "type": "horizontal"
+              }
+            },
+            {
+              "title": "Divider 3",
+              "span": 24,
+              "group": "dividers",
+              "component": "DividerDefault",
+              "data": {
+                "icon": 75,
+                "text": "Text divider [ left ]",
+                "type": "horizontal",
+                "orientation": "left"
+              }
+            },
+            {
+              "title": "Divider 4",
+              "span": 24,
+              "group": "dividers",
+              "component": "DividerDefault",
+              "data": {
+                "icon": 75,
+                "text": "Text divider [ right ]",
+                "type": "horizontal",
+                "orientation": "right"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
