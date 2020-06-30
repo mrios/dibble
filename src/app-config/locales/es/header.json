@@ -1,3 +1,11 @@
 {
-  "sign_out": "Salir"
+  "sign_out": "Salir",
+  "profile": "Perfil",
+  "content": {
+    "home": "Inicio",
+    "docs": "Documentacion App",
+    "reports": "Reportes",
+    "dashboard": "Panel de indicadores",
+    "notifications": "Notificationes"
+  }
 }

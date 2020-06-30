@@ -1,6 +1,24 @@
 {
   "home": "Home",
-  "docs": "Docs",
-  "api_docs": "API Documentation",
-  "settings": "Settings"
+  "reports": "Reports",
+  "dashboard": "Dashboard",
+  "notifications": "Notifications",
+  "docs": {
+    "group": "Docs",
+    "app": "App Docs",
+    "api": "API Docs"
+  },
+  "settings": {
+    "group": "Settings",
+    "users": {
+      "users": "Users",
+      "edit": "Edit",
+      "new": "New"
+    },
+    "roles": {
+      "roles": "Roles",
+      "edit": "Edit",
+      "new": "New"
+    }
+  }
 }

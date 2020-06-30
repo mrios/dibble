@@ -1,6 +1,16 @@
 {
   "home": "Inicio",
-  "docs": "Docs",
-  "api_docs": "Docs API",
-  "settings": "Configuracion"
+  "docs": {
+    "group": "Docs",
+    "app": "Docs de la APP",
+    "api": "Docs de la API"
+  },
+  "dashboard": "Indicadores",
+  "reports": "Reportes",
+  "notifications": "Notificaciones",
+  "settings": {
+    "group": "Configuracion",
+    "users": "Usuarios",
+    "roles": "Roles"
+  }
 }

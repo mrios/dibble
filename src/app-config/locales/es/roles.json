@@ -1,0 +1,48 @@
+{
+  "list": {
+    "name": "Nombre",
+    "description": "Descripcion",
+    "active": "Estado",
+    "status": {
+      "active": "activo",
+      "inactive": "no activo"
+    },
+    "createdAt": "Creado En",
+    "operations": "Acciones",
+    "actions": {
+      "edit": "Editar",
+      "remove": "Eliminar"
+    },
+    "filters": {
+      "name": "Nombre",
+      "name_placeholder": "Un nombre...",
+      "description": "Descripcion",
+      "description_placeholder": "Una descripcion...",
+      "actions": {
+        "search": "Buscar",
+        "add": "Agregar"
+      }
+    }
+  },
+  "form": {
+    "title": "Formulario de Rol",
+    "name": "Nombre",
+    "name_placeholder": "Un nombre...",
+    "description": "Descripcion",
+    "description_placeholder": "Una descripcion...",
+    "active": "Activo",
+    "actions": {
+      "reset": "Resetear",
+      "submit": "Guardar"
+    }
+  },
+  "admin": {
+    "list": {
+      "filters": {
+        "title": "Filtros de admin",
+        "all": "Todos",
+        "active": "Activos"
+      }
+    }
+  }
+}

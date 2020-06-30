@@ -1,6 +1,13 @@
 {
   "home": "Home",
-  "docs": "Docs",
-  "api_docs": "API Docs",
-  "settings": "Settings"
+  "docs": {
+    "group": "Docs",
+    "app": "App Docs",
+    "api": "API Docs"
+  },
+  "settings": {
+    "group": "Settings",
+    "users": "Users",
+    "roles": "Roles"
+  }
 }

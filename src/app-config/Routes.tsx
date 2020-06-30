@@ -1,4 +1,9 @@
-import { Home, Docs, Swagger, Settings } from './../components/app';
+import { Home, Docs, Swagger } from './../components/app';
+import { UserList, UserForm } from './../components/users';
+import { RoleList, RoleForm } from './../components/roles';
+import { Dashboard } from './../components/dashboard';
+import { ReportList } from './../components/reports';
+import { NotificationList } from './../components/notifications';
 
 const Routes = [
   {
@@ -7,7 +12,21 @@ const Routes = [
     component: Home,
   },
   {
-    path: '/docs',
+    path: '/dashboard/:id',
+    component: Dashboard,
+  },
+  {
+    path: '/reports',
+    exact: true,
+    component: ReportList,
+  },
+  {
+    path: '/notifications',
+    exact: true,
+    component: NotificationList,
+  },
+  {
+    path: '/docs/app',
     exact: true,
     component: Docs,
   },
@@ -16,8 +35,22 @@ const Routes = [
     component: Swagger,
   },
   {
-    path: '/settings',
-    component: Settings,
+    path: '/settings/users',
+    exact: true,
+    component: UserList,
+  },
+  {
+    path: '/settings/users/:id',
+    component: UserForm,
+  },
+  {
+    path: '/settings/roles',
+    exact: true,
+    component: RoleList,
+  },
+  {
+    path: '/settings/roles/:id',
+    component: RoleForm,
   },
 ];
 

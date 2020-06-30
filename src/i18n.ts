@@ -9,9 +9,9 @@ i18n
   .use(initReactI18next)
   .init({
     resources,
-    lng: 'es',
+    lng: 'en',
     // we do not use keys in form messages.welcome
-    keySeparator: false,
+    keySeparator: '.',
     interpolation: {
       // react already safes from xss
       escapeValue: false,

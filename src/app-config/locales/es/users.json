@@ -1,0 +1,53 @@
+{
+  "list": {
+    "username": "Nombre de usuario",
+    "first_name": "Nombre",
+    "last_name": "Apellido",
+    "active": "Activo",
+    "status": {
+      "active": "activo",
+      "inactive": "inactivo"
+    },
+    "createdAt": "Creado En",
+    "operations": "Acciones",
+    "actions": {
+      "edit": "Editar",
+      "remove": "Eliminar"
+    },
+    "filters": {
+      "username": "Usuario",
+      "username_placeholder": "Un nombre de usuario...",
+      "first_name": "Nombre",
+      "first_name_placeholder": "Un nombre...",
+      "last_name": "Apellido",
+      "last_name_placeholder": "Un apellido...",
+      "actions": {
+        "search": "Buscar",
+        "add": "Agregar"
+      }
+    }
+  },
+  "form": {
+    "title": "Formulario de Usuario",
+    "username": "Nombre de usuario",
+    "username_placeholder": "Un nombre de usuario...",
+    "first_name": "Nombre",
+    "first_name_placeholder": "Un nombre...",
+    "last_name": "Apellido",
+    "last_name_placeholder": "Un apellido...",
+    "active": "Activo",
+    "actions": {
+      "reset": "Resetear",
+      "submit": "Guardar"
+    }
+  },
+  "admin": {
+    "list": {
+      "filters": {
+        "title": "Filtros de Admin",
+        "all": "Todos",
+        "active": "Activo"
+      }
+    }
+  }
+}

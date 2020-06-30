@@ -1,3 +1,11 @@
 {
-  "sign_out": "Sign out"
+  "sign_out": "Sign out",
+  "profile": "Profile",
+  "content": {
+    "home": "Home",
+    "docs": "App Documentation",
+    "reports": "Reports",
+    "dashboard": "Dashboard",
+    "notifications": "Notifications"
+  }
 }
