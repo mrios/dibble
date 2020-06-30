@@ -1,6 +1,15 @@
 import React, { useContext } from 'react';
-import { Layout, Dropdown, Menu } from 'antd';
-import { MenuUnfoldOutlined, MenuFoldOutlined } from '@ant-design/icons';
+import { Layout, Dropdown, Menu, Tooltip, Button, Badge, Avatar } from 'antd';
+import {
+  MenuUnfoldOutlined,
+  MenuFoldOutlined,
+  BellOutlined,
+  SettingOutlined,
+  QuestionCircleOutlined,
+  UserOutlined,
+  ControlOutlined,
+  PoweroffOutlined,
+} from '@ant-design/icons';
 
 import {
   AppContext,
@@ -26,11 +35,24 @@ const HeaderApp = () => {
         i18n.changeLanguage(key);
       }}
     >
-      <Menu.Item key="en" className={state.appLang === 'en' ? 'active' : ''}>
-        English
+      <Menu.ItemGroup title="Select Language">
+        <Menu.Item key="en" className={state.appLang === 'en' ? 'active' : ''}>
+          English
+        </Menu.Item>
+        <Menu.Item key="es" className={state.appLang === 'es' ? 'active' : ''}>
+          Español
+        </Menu.Item>
+      </Menu.ItemGroup>
+    </Menu>
+  );
+  const menuUser = (
+    <Menu>
+      <Menu.Item key="profile" icon={<ControlOutlined />}>
+        <Link to="/profile">{t('header:profile')}</Link>
       </Menu.Item>
-      <Menu.Item key="es" className={state.appLang === 'es' ? 'active' : ''}>
-        Español
+      <Menu.Divider />
+      <Menu.Item key="logout" icon={<PoweroffOutlined />}>
+        <Link to="/logout">{t('header:sign_out')}</Link>
       </Menu.Item>
     </Menu>
   );
@@ -49,9 +71,31 @@ const HeaderApp = () => {
       )}
       <BreadcrumbApp />
       <div className="user-controls">
-        <Dropdown.Button overlay={menuLang}>
-          <Link to="logout">{t('header:sign_out')}</Link>
-        </Dropdown.Button>
+        <Tooltip title="notifications">
+          <Badge dot offset={[-10, 10]}>
+            <Link to="/notifications">
+              <Button type="text" shape="circle" icon={<BellOutlined />} />
+            </Link>
+          </Badge>
+        </Tooltip>
+        <Tooltip title="help">
+          <Link to="/help">
+            <Button
+              type="text"
+              shape="circle"
+              icon={<QuestionCircleOutlined />}
+            />
+          </Link>
+        </Tooltip>
+
+        <Dropdown overlay={menuLang}>
+          <Link to="/logout">
+            <Button type="text" shape="circle" icon={<SettingOutlined />} />
+          </Link>
+        </Dropdown>
+        <Dropdown overlay={menuUser}>
+          <Avatar icon={<UserOutlined />} />
+        </Dropdown>
       </div>
     </Header>
   );

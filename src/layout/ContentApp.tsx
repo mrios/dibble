@@ -1,14 +1,19 @@
-import React, { FC } from 'react';
+import React, { FC, useContext } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import routes from './../app-config/Routes';
 import { Layout } from 'antd';
 import HeaderApp from './HeaderApp';
+import { AppContext } from '../components/app/state/AppContext';
 
 const { Content } = Layout;
 
 const ContentApp: FC = (props) => {
+  const { state } = useContext(AppContext);
   return (
-    <Layout className="site-layout">
+    <Layout
+      className="site-layout"
+      style={{ marginLeft: state.isCollapsed ? 80 : state.siderWidth }}
+    >
       <HeaderApp />
       <Content
         className="site-layout-background"
