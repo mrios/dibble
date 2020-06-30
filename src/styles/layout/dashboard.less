@@ -1,0 +1,30 @@
+.ant-tabs {
+  &.nested-tabs {
+    margin-top: -(3 * @margin-lg) + 4px;
+
+    .ant-tabs-nav-wrap {
+      margin-bottom: @margin-md;
+      .ant-tabs-nav-list button {
+        .monserrat-bold();
+        text-transform: uppercase;
+        font-size: 13px;
+      }
+    }
+  }
+
+  .ant-divider {
+    border-top-color: @gray-6;
+    &.ant-divider-with-text {
+      &:before,
+      &:after {
+        border-top-color: @blue-5;
+      }
+    }
+  }
+
+  .ant-card {
+    &.card-transparent {
+      background: transparent;
+    }
+  }
+}

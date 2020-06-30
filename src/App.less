@@ -1,13 +1,33 @@
 @import '~antd/dist/antd.less';
 
+@import './styles/mixins/default.less';
+
 @import './styles/custom-colors.less';
 @import './styles/custom-fonts.less';
 
 @import './styles/layout/header.less';
+@import './styles/layout/toolbar-min.less';
+@import './styles/layout/dashboard.less';
+
+@import './styles/components/table.less';
+@import './styles/components/form.less';
 
 .App {
   text-align: left;
   .lato-light();
+
+  .ant-typography {
+    .lato-light();
+  }
+
+  .ant-menu-item-group-title {
+    .monserrat-bold();
+    margin-top: @margin-lg;
+    text-transform: uppercase;
+    font-size: 11px;
+    color: @blue-6;
+    border-bottom: 1px solid @blue-8;
+  }
 
   .site-layout {
     .site-page-header {
@@ -29,7 +49,7 @@
     }
     .site-layout-background {
       padding: 0;
-      background: @gray-2;
+      // background: @gray-3;
       &.site-header {
         background: @white;
       }
@@ -59,6 +79,10 @@
     .monserrat-semibold();
     text-transform: uppercase;
     font-size: 13px;
+  }
+
+  .ant-back-top {
+    right: 50px;
   }
 }
 

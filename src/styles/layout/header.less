@@ -1,6 +1,15 @@
 @import './../custom-fonts.less';
 @import './../custom-colors.less';
 
+@import './../mixins/default.less';
+
+.ant-menu {
+  padding-top: @padding-lg;
+  .ant-menu-item {
+    .transition(all, 750ms, ease);
+  }
+}
+
 .brand {
   padding: @padding-md;
   display: flex;
@@ -31,6 +40,10 @@
 .user-controls {
   margin-left: auto;
   margin-right: @margin-lg;
+
+  .ant-avatar {
+    margin-left: @margin-xs;
+  }
 }
 
 .ant-layout-sider-collapsed {
@@ -48,5 +61,40 @@
     .anticon {
       font-size: 46px;
     }
+  }
+
+  .ant-menu-dark.ant-menu-dark:not(.ant-menu-horizontal) .ant-menu-item {
+    background: transparent;
+    &.ant-menu-item-selected {
+      .transition(all, 1s, ease);
+      span.anticon {
+        .transition(all, 500ms, ease);
+        .border-radius();
+        // .transparentBackground(0.2, @primary-color);
+        background: @primary-color;
+        padding: 0 18px;
+        margin: -20px;
+      }
+    }
+  }
+  .ant-menu-item-group-title {
+    display: none;
+  }
+}
+
+.header-content {
+  margin: -@margin-lg;
+  padding: @padding-lg;
+  margin-bottom: @margin-lg;
+  background: @white;
+  &:not(.header-nested-tabs) {
+    border-bottom: 1px solid @gray-5;
+  }
+  h1 {
+    .lato-light();
+    font-size: 24px;
+  }
+  &.header-nested-tabs {
+    border-bottom: none;
   }
 }
