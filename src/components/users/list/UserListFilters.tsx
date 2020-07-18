@@ -23,18 +23,35 @@ const UserListFilters = (props: FilterProps) => {
         form={form}
         onFinish={(values: Store) => props.onSearch(values)}
       >
-        <Form.Item name="username" label={t('users:list.filters.username')}>
-          <Input placeholder={t('users:list.filters.username_placeholder')} />
+        <Form.Item
+          name="username"
+          label={t('settings:users.list.filters.username')}
+        >
+          <Input
+            placeholder={t('settings:users.list.filters.username_placeholder')}
+          />
         </Form.Item>
-        <Form.Item name="firstName" label={t('users:list.filters.first_name')}>
-          <Input placeholder={t('users:list.filters.first_name_placeholder')} />
+        <Form.Item
+          name="firstName"
+          label={t('settings:users.list.filters.first_name')}
+        >
+          <Input
+            placeholder={t(
+              'settings:users.list.filters.first_name_placeholder'
+            )}
+          />
         </Form.Item>
-        <Form.Item name="lastName" label={t('users:list.filters.last_name')}>
-          <Input placeholder={t('users:list.filters.last_name_placeholder')} />
+        <Form.Item
+          name="lastName"
+          label={t('settings:users.list.filters.last_name')}
+        >
+          <Input
+            placeholder={t('settings:users.list.filters.last_name_placeholder')}
+          />
         </Form.Item>
         <Form.Item {...buttonItemLayout}>
           <Button type="primary" htmlType="submit" icon={<SearchOutlined />}>
-            {t('users:list.filters.actions.search')}
+            {t('settings:users.list.filters.actions.search')}
           </Button>
         </Form.Item>
         <Form.Item {...buttonItemLayout} className="pull-right">
@@ -43,7 +60,7 @@ const UserListFilters = (props: FilterProps) => {
               type="ghost"
               icon={<PlusCircleTwoTone twoToneColor="#52c41a" />}
             >
-              {t('users:list.filters.actions.add')}
+              {t('settings:users.list.filters.actions.add')}
             </Button>
           </Link>
         </Form.Item>

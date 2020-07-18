@@ -10,31 +10,31 @@ const TableDefault = (props: any) => {
   const [{ users }] = useUsersFacade();
   const columns: ColumnsType<{}> = [
     {
-      title: t('users:list.username'),
+      title: t('settings:users.list.username'),
       dataIndex: 'username',
       key: 'username',
     },
     {
-      title: t('users:list.first_name'),
+      title: t('settings:users.list.first_name'),
       dataIndex: 'firstName',
       key: 'firstName',
     },
     {
-      title: t('users:list.last_name'),
+      title: t('settings:users.list.last_name'),
       dataIndex: 'lastName',
       key: 'lastName',
     },
     {
-      title: t('users:list.active'),
+      title: t('settings:users.list.active'),
       dataIndex: 'active',
       key: 'active',
       render: (value, record) => [
         value ? (
           <Tag color="#87d068" key="active">
-            {t('users:list.status.active')}
+            {t('settings:users.list.status.active')}
           </Tag>
         ) : (
-          <Tag key="inactive">{t('users:list.status.inactive')}</Tag>
+          <Tag key="inactive">{t('settings:users.list.status.inactive')}</Tag>
         ),
       ],
     },

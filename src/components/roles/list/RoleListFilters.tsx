@@ -23,20 +23,24 @@ const RoleListFilters = (props: FilterProps) => {
         form={form}
         onFinish={(values: Store) => props.onSearch(values)}
       >
-        <Form.Item name="name" label={t('roles:list.filters.name')}>
-          <Input placeholder={t('roles:list.filters.name_placeholder')} />
+        <Form.Item name="name" label={t('settings:roles.list.filters.name')}>
+          <Input
+            placeholder={t('settings:roles.list.filters.name_placeholder')}
+          />
         </Form.Item>
         <Form.Item
           name="description"
-          label={t('roles:list.filters.description')}
+          label={t('settings:roles.list.filters.description')}
         >
           <Input
-            placeholder={t('roles:list.filters.description_placeholder')}
+            placeholder={t(
+              'settings:roles.list.filters.description_placeholder'
+            )}
           />
         </Form.Item>
         <Form.Item {...buttonItemLayout}>
           <Button type="primary" htmlType="submit" icon={<SearchOutlined />}>
-            {t('roles:list.filters.actions.search')}
+            {t('settings:roles.list.filters.actions.search')}
           </Button>
         </Form.Item>
         <Form.Item {...buttonItemLayout} className="pull-right">
@@ -45,7 +49,7 @@ const RoleListFilters = (props: FilterProps) => {
               type="ghost"
               icon={<PlusCircleTwoTone twoToneColor="#52c41a" />}
             >
-              {t('roles:list.filters.actions.add')}
+              {t('settings:roles.list.filters.actions.add')}
             </Button>
           </Link>
         </Form.Item>

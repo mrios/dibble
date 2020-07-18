@@ -13,7 +13,7 @@ const RoleAdminFilter = (props: RoleAdminFilterProps) => {
     <Row className="toolbar-min toolbar-top">
       <Col offset="1">
         <span className="toolbar-min-header">
-          {i18n.t('roles:admin.list.filters.title')}
+          {i18n.t('settings:roles.admin.list.filters.title')}
         </span>
 
         <Select
@@ -23,10 +23,10 @@ const RoleAdminFilter = (props: RoleAdminFilterProps) => {
           onChange={(value) => props.onChange(value)}
         >
           <Select.Option value="SHOW_ALL">
-            {i18n.t('roles:admin.list.filters.all')}
+            {i18n.t('settings:roles.admin.list.filters.all')}
           </Select.Option>
           <Select.Option value="SHOW_ACTIVE">
-            {i18n.t('roles:admin.list.filters.active')}
+            {i18n.t('settings:roles.admin.list.filters.active')}
           </Select.Option>
         </Select>
       </Col>

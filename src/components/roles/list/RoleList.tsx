@@ -28,17 +28,17 @@ const RoleList = () => {
 
   const columns: ColumnsType<{}> = [
     {
-      title: t('roles:list.name'),
+      title: t('settings:roles.list.name'),
       dataIndex: 'name',
       key: 'name',
     },
     {
-      title: t('roles:list.description'),
+      title: t('settings:roles.list.description'),
       dataIndex: 'description',
       key: 'description',
     },
     {
-      title: t('roles:list.active'),
+      title: t('settings:roles.list.active'),
       dataIndex: 'active',
       key: 'active',
       render: (value, record) => [
@@ -48,22 +48,22 @@ const RoleList = () => {
             key="active"
             onClick={(_) => toggleActive(record as Role)}
           >
-            {t('roles:list.status.active')}
+            {t('settings:roles.list.status.active')}
           </Tag>
         ) : (
           <Tag key="inactive" onClick={(_) => toggleActive(record as Role)}>
-            {t('roles:list.status.inactive')}
+            {t('settings:roles.list.status.inactive')}
           </Tag>
         ),
       ],
     },
     {
-      title: t('roles:list.createdAt'),
+      title: t('settings:roles.list.createdAt'),
       dataIndex: 'createdAt',
       key: 'createdAt',
     },
     {
-      title: t('roles:list.operations'),
+      title: t('settings:roles.list.operations'),
       dataIndex: 'id',
       key: 'id',
       render: (value, record) => [
@@ -73,14 +73,14 @@ const RoleList = () => {
           key="edit"
           onClick={(_) => editRole(record as Role)}
         >
-          {t('roles:list.actions.edit')}
+          {t('settings:roles.list.actions.edit')}
         </Button>,
         <Button
           size="small"
           key="remove"
           onClick={(_) => deleteRole(record as Role)}
         >
-          {t('roles:list.actions.remove')}
+          {t('settings:roles.list.actions.remove')}
         </Button>,
       ],
     },

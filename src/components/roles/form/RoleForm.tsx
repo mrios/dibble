@@ -42,20 +42,23 @@ const RoleForm = (props: any) => {
       onFinish={onFinish}
       style={{ padding: 24 }}
     >
-      <Title level={4}>{t('roles:form.title')}</Title>
+      <Title level={4}>{t('settings:roles.form.title')}</Title>
       <Divider />
-      <Form.Item name="name" label={t('roles:form.name')}>
-        <Input placeholder={t('roles:form.name_placeholder')} />
+      <Form.Item name="name" label={t('settings:roles.form.name')}>
+        <Input placeholder={t('settings:roles.form.name_placeholder')} />
       </Form.Item>
-      <Form.Item name="description" label={t('roles:form.description')}>
-        <Input placeholder={t('roles:form.description_placeholder')} />
+      <Form.Item
+        name="description"
+        label={t('settings:roles.form.description')}
+      >
+        <Input placeholder={t('settings:roles.form.description_placeholder')} />
       </Form.Item>
-      <Form.Item name="active" label={t('roles:form.active')}>
+      <Form.Item name="active" label={t('settings:roles.form.active')}>
         <Switch defaultChecked />
       </Form.Item>
       <Form.Item {...buttonItemLayout}>
         <Button type="primary" htmlType="submit">
-          {t('roles:form.actions.submit')}
+          {t('settings:roles.form.actions.submit')}
         </Button>
       </Form.Item>
     </Form>
