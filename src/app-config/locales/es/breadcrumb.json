@@ -1,7 +1,11 @@
 {
   "home": "Inicio",
   "reports": "Reportes",
-  "dashboard": "Panel de indicadores",
+  "dashboard": {
+    "group": "Panel de indicadores",
+    "demo": "Demo",
+    "designer": "Diseñador"
+  },
   "notifications": "Notificationes",
   "docs": {
     "group": "Docs",

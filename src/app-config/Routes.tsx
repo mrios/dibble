@@ -1,7 +1,7 @@
 import { Home, Docs, Swagger } from './../components/app';
 import { UserList, UserForm } from './../components/users';
 import { RoleList, RoleForm } from './../components/roles';
-import { Dashboard } from './../components/dashboard';
+import { Dashboard, DashboardDesigner } from './../components/dashboard';
 import { ReportList } from './../components/reports';
 import { NotificationList } from './../components/notifications';
 
@@ -12,8 +12,14 @@ const Routes = [
     component: Home,
   },
   {
-    path: '/dashboard/:id',
+    path: '/dashboard/preview/:id',
+    exact: true,
     component: Dashboard,
+  },
+  {
+    path: '/dashboard/designer',
+    exact: true,
+    component: DashboardDesigner,
   },
   {
     path: '/reports',

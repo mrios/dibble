@@ -1,7 +1,11 @@
 {
   "home": "Home",
   "reports": "Reports",
-  "dashboard": "Dashboard",
+  "dashboard": {
+    "group": "Dashboard",
+    "demo": "Demo [Preview]",
+    "designer": "Designer"
+  },
   "notifications": "Notifications",
   "docs": {
     "group": "Docs",

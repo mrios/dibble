@@ -5,6 +5,13 @@
     "app": "App Docs",
     "api": "API Docs"
   },
+  "dashboard": {
+    "group": "Dashboard",
+    "demo": "Demo",
+    "designer": "Designer"
+  },
+  "reports": "Reports",
+  "notifications": "Notifications",
   "settings": {
     "group": "Settings",
     "users": "Users",

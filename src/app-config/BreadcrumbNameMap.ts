@@ -7,11 +7,13 @@ type ObjectStringType = {
 export const getBreadcrumbNameMap = () => {
   let breadcrumbNameMap: ObjectStringType = {
     '/': i18n.t('breadcrumb:home'),
-    '/dashboard': i18n.t('breadcrumb:dashboard'),
+    '/dashboard': i18n.t('breadcrumb:dashboard.group'),
+    '/dashboard/preview/demo': i18n.t('breadcrumb:dashboard.demo'),
+    '/dashboard/designer': i18n.t('breadcrumb:dashboard.designer'),
     '/reports': i18n.t('breadcrumb:reports'),
     '/notifications': i18n.t('breadcrumb:notifications'),
     '/docs': i18n.t('breadcrumb:docs.group'),
-    //'/docs': i18n.t('breadcrumb:docs'),
+    '/docs/app': i18n.t('breadcrumb:docs.app'),
     '/docs/api': i18n.t('breadcrumb:docs.api'),
     '/settings': i18n.t('breadcrumb:settings.group'),
     '/settings/users': i18n.t('breadcrumb:settings.users.users'),
@@ -22,3 +24,5 @@ export const getBreadcrumbNameMap = () => {
   };
   return breadcrumbNameMap;
 };
+
+export const unlinkeables = ['/dashboard', '/docs', '/settings'];
