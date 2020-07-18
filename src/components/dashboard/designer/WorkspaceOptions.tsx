@@ -1,6 +1,7 @@
 import React, { FC, useEffect } from 'react';
 import { Row, Col, Form, Input, Switch, Slider, Button, Radio } from 'antd';
 import { useComponentFacade } from '../components/state/component.hooks';
+import { useTranslation } from 'react-i18next';
 
 interface WorkspaceOptionsProps {
   workspace?: {
@@ -22,6 +23,7 @@ interface WorkspaceOptionsProps {
   onUpdate: Function;
 }
 const WorkspaceOptions: FC<WorkspaceOptionsProps> = (props) => {
+  const { t } = useTranslation();
   const [{ active }, actions] = useComponentFacade();
   const [form] = Form.useForm();
   // const { t } = useTranslation();
@@ -57,7 +59,9 @@ const WorkspaceOptions: FC<WorkspaceOptionsProps> = (props) => {
     >
       <Row>
         <Col span={24}>
-          <h4 className="subsection-header">Card</h4>
+          <h4 className="subsection-header">
+            {t('dashboard:designer.options.card')}
+          </h4>
           <Form.Item name="on" label="Wrapped in Card">
             <Switch
               defaultChecked={props?.card?.on || true}
@@ -132,7 +136,9 @@ const WorkspaceOptions: FC<WorkspaceOptionsProps> = (props) => {
           </div>
         </Col>
         <Col span={24}>
-          <h4 className="subsection-header">Component</h4>
+          <h4 className="subsection-header">
+            {t('dashboard:designer.options.component')}
+          </h4>
           <Form.Item name="name" label="Name">
             <Input placeholder="..." size="small" />
           </Form.Item>

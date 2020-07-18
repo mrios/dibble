@@ -68,7 +68,9 @@ const DashboardDesigner = () => {
     <>
       <Row style={{ margin: -24 }} className="dashboard-designer">
         <Col span={4}>
-          <h3 className="section-header">Components</h3>
+          <h3 className="section-header">
+            {t('dashboard:designer.components')}
+          </h3>
           <ComponentSelector onSelect={onSelect} />
         </Col>
         <Col span={20}>

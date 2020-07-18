@@ -72,7 +72,10 @@ const Workspace: FC<WorkspaceProps> = (props) => {
                   size="small"
                 />
               </Form.Item>
-              <Form.Item name="workspaceTheme" label="Justify">
+              <Form.Item
+                name="workspaceTheme"
+                label={t('dashboard:designer.preview.justify')}
+              >
                 <Radio.Group
                   defaultValue={workspaceJustify || 'center'}
                   options={optionsJustify}
@@ -119,7 +122,9 @@ const Workspace: FC<WorkspaceProps> = (props) => {
         </Row>
       </Col>
       <Col span={5} className="component-options">
-        <h3 className="section-header">Options</h3>
+        <h3 className="section-header">
+          {t('dashboard:designer.options.title')}
+        </h3>
         <WorkspaceOptions card={cardProps} onUpdate={onUpdate} />
       </Col>
     </Row>
