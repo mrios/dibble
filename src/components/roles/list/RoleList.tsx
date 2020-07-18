@@ -93,7 +93,7 @@ const RoleList = () => {
         selectedFilter={filter}
       />
       <RoleListFilters onSearch={actions.applyFilter} />
-      <ListBasic data={roles} columns={columns} />
+      <ListBasic data={roles} columns={columns} extraClass="round-borders" />
     </>
   );
 };

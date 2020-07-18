@@ -98,7 +98,7 @@ const UserList = () => {
         selectedFilter={filter}
       /> */}
       <UserListFilters onSearch={actions.applyFilter} />
-      <ListBasic data={users} columns={columns} />
+      <ListBasic data={users} columns={columns} extraClass="round-borders" />
     </>
   );
 };

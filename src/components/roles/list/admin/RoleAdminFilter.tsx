@@ -10,7 +10,7 @@ export interface RoleAdminFilterProps {
 
 const RoleAdminFilter = (props: RoleAdminFilterProps) => {
   return (
-    <Row className="toolbar-min">
+    <Row className="toolbar-min toolbar-top">
       <Col offset="1">
         <span className="toolbar-min-header">
           {i18n.t('roles:admin.list.filters.title')}
