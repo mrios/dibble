@@ -25,7 +25,7 @@ const antIcon = <LoadingOutlined style={{ fontSize: 24 }} spin />;
 
 const importView = ({ relativePath, group, component }: RenderItemProps) =>
   lazy(() =>
-    import(`${relativePath}/${group}/${component}`).catch(() =>
+    import(`${relativePath}/components/${group}/${component}`).catch(() =>
       import('./NullComponent')
     )
   );
@@ -35,12 +35,20 @@ const LoadComponent: React.FC<RenderItemProps> = (props: RenderItemProps) => {
   const ToRender =
     props.iterable && props.data && Array.isArray(props.data) ? (
       <>
-        {props.data.map((item: any, i: number) => (
-          <Component {...item} key={`subcomponent-${i}`} />
-        ))}
+        {props.data.map((item: any, i: number) => {
+          if (item.renderItem) {
+            const SubComponent = importView({
+              ...item.renderItem,
+              relativePath: props.relativePath,
+            });
+            return <SubComponent {...item.data} key={`subcomponent-${i}`} />;
+          } else {
+            return <Component {...item} key={`subcomponent-${i}`} />;
+          }
+        })}
       </>
     ) : (
-      <Component {...props.data} />
+      <Component {...{ ...props.data, title: props.title }} />
     );
   return (
     <Col span={props.span} offset={props.offset} key={props.key}>
@@ -48,7 +56,9 @@ const LoadComponent: React.FC<RenderItemProps> = (props: RenderItemProps) => {
         props.card.style ? (
           <Card
             className={props.card.transparent ? 'card-transparent' : ''}
-            title={props.card.title}
+            title={
+              props?.card?.title === null ? '' : props.card.title || props.title
+            }
             size="small"
             extra={
               <a href="#">{props.card.extra ? props.card.extra : undefined}</a>
@@ -56,7 +66,7 @@ const LoadComponent: React.FC<RenderItemProps> = (props: RenderItemProps) => {
           >
             <Card.Grid
               style={props.card.style}
-              hoverable={props.card.hoverable}
+              hoverable={props.card.hoverable || false}
             >
               <React.Suspense fallback={<Spin indicator={antIcon} />}>
                 {ToRender}
@@ -65,13 +75,11 @@ const LoadComponent: React.FC<RenderItemProps> = (props: RenderItemProps) => {
           </Card>
         ) : (
           <Card
-            className={props.card.transparent ? 'card-transparent' : ''}
-            style={props.card.style}
-            title={props.card.title}
+            className={props?.card?.transparent ? 'card-transparent' : ''}
+            style={props?.card?.style}
+            title={props?.card?.title || props?.title || ''}
             size="small"
-            extra={
-              <a href="#">{props.card.extra ? props.card.extra : undefined}</a>
-            }
+            extra={<a href="#">{props?.card?.extra || undefined}</a>}
           >
             <React.Suspense fallback={<Spin indicator={antIcon} />}>
               {ToRender}

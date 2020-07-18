@@ -1,11 +1,15 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useDashboardFacade } from './state/dashboard.hooks';
 import LoadTemplate from './LoadTemplate';
 import { Row, Col, Select } from 'antd';
 import { useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
-const templates = {
+type ObjectStringType = {
+  [key: string]: string;
+};
+
+const templates: ObjectStringType = {
   'on-demand': 'DashboardOnDemand',
   'on-demand-tabs-left': 'DashboardOnDemandTabsLeft',
 };
@@ -13,35 +17,29 @@ const templates = {
 const Dashboard = (props: any) => {
   const { id } = useParams();
   const [stateDashboard] = useDashboardFacade({ id: id });
+
   const { t } = useTranslation();
-  const [template, setTemplate] = useState(templates['on-demand']);
+  const [template, setTemplate] = useState('on-demand');
   const [templateDashboardView, setTemplateDashboardView] = useState(
     LoadTemplate({
-      template: template,
+      template: templates[template],
       data: stateDashboard.data,
       onChange: () => {},
     })
   );
-  // let dashboardTemplateView = LoadTemplate({
-  //   template: template,
-  //   data: stateDashboard.data,
-  //   onChange: () => {},
-  // });
-
-  // let dashboardTemplateView = null;
 
   useEffect(() => {
     setTemplateDashboardView(
       LoadTemplate({
-        template: template,
+        template: templates[template],
         data: stateDashboard.data,
         onChange: () => {},
       })
     );
   }, [stateDashboard, template]);
 
-  const changeTemplate = (tpl: 'on-demand' | 'on-demand-tabs-left') => {
-    console.log('tpl', templates[tpl]);
+  const changeTemplate = (tpl: string) => {
+    setTemplate(tpl);
     setTemplateDashboardView(
       LoadTemplate({
         template: templates[tpl],
@@ -53,7 +51,7 @@ const Dashboard = (props: any) => {
 
   return (
     <>
-      <Row className="toolbar-min">
+      <Row className="toolbar-min toolbar-top">
         <Col offset="1">
           <span className="toolbar-min-header">
             {t('dashboard:admin.select_template')}
@@ -61,13 +59,13 @@ const Dashboard = (props: any) => {
 
           <Select
             size="small"
-            value="on-demand"
+            value={template}
             style={{ width: 220 }}
             onChange={(value) => changeTemplate(value)}
           >
             <Select.Option value="on-demand">On demand</Select.Option>
             <Select.Option value="on-demand-tabs-left">
-              On demand Tabs left
+              On demand Tabs on the left
             </Select.Option>
           </Select>
         </Col>

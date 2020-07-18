@@ -1,7 +1,13 @@
+@import './../mixins/default.less';
+
 .ant-tabs {
   &.nested-tabs {
     margin-top: -(3 * @margin-lg) + 4px;
-
+    .ant-tabs-nav {
+      &:before {
+        border-color: transparent;
+      }
+    }
     .ant-tabs-nav-wrap {
       margin-bottom: @margin-md;
       .ant-tabs-nav-list button {
@@ -21,10 +27,181 @@
       }
     }
   }
+}
 
+.template-on-demand,
+.component-wrapper {
   .ant-card {
     &.card-transparent {
       background: transparent;
+      border-color: transparent;
+      .ant-card-grid {
+        box-shadow: none;
+      }
+    }
+  }
+  &.dark-theme {
+    @dark-theme-bg: #001529;
+    @dark-theme-bg-75: rgba(
+      red(@dark-theme-bg),
+      green(@dark-theme-bg),
+      blue(@dark-theme-bg),
+      0.75
+    );
+    .transparentBackground(0.75, @dark-theme-bg);
+    span,
+    div,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    small {
+      color: white;
+    }
+    a {
+      color: @blue-5;
+    }
+    .header-content {
+      &.header-nested-tabs {
+        .transparentBackground(0.15, @dark-theme-bg);
+        //.gradient(red, green);
+      }
+    }
+    .ant-alert {
+      &:not(.dark-contrast) {
+        .transparentBackground(0.15, @dark-theme-bg);
+        border-color: @dark-theme-bg-75;
+        &.ant-alert-success {
+          .anticon > svg {
+            color: lightgreen;
+          }
+        }
+        &.ant-alert-error {
+          .anticon > svg {
+            color: lightcoral;
+          }
+        }
+        &.ant-alert-warning {
+          .anticon > svg {
+            color: coral;
+          }
+        }
+        &.ant-alert-info {
+          .anticon > svg {
+            color: @blue-5;
+          }
+        }
+      }
+      &.dark-contrast {
+        .anticon > svg,
+        .ant-alert-message,
+        .ant-alert-description {
+          color: @dark-theme-bg;
+        }
+      }
+    }
+    .ant-table {
+      margin-top: @margin-lg;
+      .transparentBackground(0.15, @dark-theme-bg);
+      .ant-table-thead {
+        .ant-table-cell {
+          color: @white;
+          .transparentBackground(0.15, @dark-theme-bg);
+        }
+      }
+      .ant-table-tbody {
+        tr:hover {
+          td {
+            .transparentBackground(0.75, @blue-5);
+          }
+        }
+      }
+    }
+    .ant-card {
+      .ant-card-grid {
+        box-shadow: none;
+      }
+      &:not(.card-transparent) {
+        .transparentBackground(0.15, @dark-theme-bg);
+        border-color: rgba(
+          red(@dark-theme-bg),
+          green(@dark-theme-bg),
+          blue(@dark-theme-bg),
+          0.15
+        );
+      }
+      .ant-card-head {
+        border-color: rgba(red(@gray-6), green(@gray-6), blue(@gray-6), 0.65);
+      }
+      .ant-card-body {
+        .g2-tooltip {
+          span,
+          div {
+            color: black;
+          }
+        }
+      }
+    }
+  }
+}
+
+.dashboard-designer {
+  background: @white;
+  height: 100vh;
+  @primary-75: rgba(
+    red(@primary-color),
+    green(@primary-color),
+    blue(@primary-color),
+    0.25
+  );
+  .header {
+    .monserrat-bold();
+    text-transform: uppercase;
+    font-size: 13px;
+    color: @gray-6;
+    margin: 0;
+    padding: @padding-xs;
+  }
+  .section-header {
+    .header();
+    text-align: center;
+    border-bottom: 1px solid @primary-75;
+  }
+  .subsection-header {
+    .header();
+    border-bottom: 1px solid @gray-4;
+    padding: 0;
+    margin-top: @padding-md;
+  }
+  .toolbar-min {
+    .transparentBackground(0.65, @gray-5);
+    .ant-form {
+      margin: 0;
+      padding: 0;
+      background: inherit;
+      .section-header {
+        border-bottom: none;
+        margin-right: @margin-lg;
+      }
+    }
+  }
+  .component-wrapper {
+    height: 80vh;
+    background: @gray-5;
+    padding: @padding-lg;
+    &.dark-theme {
+      background: @dark-theme-bg;
+      .transparentBackground(0.75, @dark-theme-bg);
+    }
+  }
+  .form-options {
+    .ant-form-item-label {
+      padding: 0;
+      margin: 0;
+      label {
+        font-size: 13px;
+      }
     }
   }
 }

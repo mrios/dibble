@@ -27,9 +27,20 @@ const AppMenu: FC = () => {
       <Menu.Item key="home" icon={<HomeFilled />}>
         <Link to="/">{t('menu:home')}</Link>
       </Menu.Item>
-      <Menu.Item key="dashboard" icon={<DashboardOutlined />}>
-        <Link to="/dashboard/demo">{t('menu:dashboard')}</Link>
-      </Menu.Item>
+
+      <Menu.SubMenu
+        key="dashboard-submenu"
+        icon={<DashboardOutlined />}
+        title={t('menu:dashboard.group')}
+      >
+        <Menu.Item key="dashboard-designer">
+          <Link to="/dashboard/designer">{t('menu:dashboard.designer')}</Link>
+        </Menu.Item>
+        <Menu.Item key="dashboard-demo">
+          <Link to="/dashboard/preview/demo">{t('menu:dashboard.demo')}</Link>
+        </Menu.Item>
+      </Menu.SubMenu>
+
       <Menu.Item key="reports" icon={<BarsOutlined />}>
         <Link to="/reports">{t('menu:reports')}</Link>
       </Menu.Item>
