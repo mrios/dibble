@@ -1,5 +1,5 @@
 import React from 'react';
-import { Progress, Tag, Row, Col, Tooltip } from 'antd';
+import { Progress, Tooltip } from 'antd';
 
 type ProgressType = 'circle' | 'line' | 'dashboard' | undefined;
 

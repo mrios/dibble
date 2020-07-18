@@ -1,9 +1,9 @@
 import React from 'react';
-import ListBasic from '../../common/list/ListBasic';
-import { useUsersFacade } from '../../users/state';
 import { useTranslation } from 'react-i18next';
 import { ColumnsType } from 'antd/lib/table';
 import { Tag } from 'antd';
+import { useUsersFacade } from '../../../users/state';
+import ListBasic from '../../../common/list/ListBasic';
 
 const TableDefault = (props: any) => {
   const { t } = useTranslation();
