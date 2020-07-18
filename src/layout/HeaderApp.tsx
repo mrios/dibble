@@ -90,9 +90,7 @@ const HeaderApp = () => {
         </Tooltip>
 
         <Dropdown overlay={menuLang}>
-          <Link to="/logout">
-            <Button type="text" shape="circle" icon={<SettingOutlined />} />
-          </Link>
+          <Button type="text" shape="circle" icon={<SettingOutlined />} />
         </Dropdown>
         <Dropdown overlay={menuUser}>
           <Avatar icon={<UserOutlined />} />
