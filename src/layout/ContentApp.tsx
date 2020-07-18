@@ -12,7 +12,11 @@ const ContentApp: FC = (props) => {
   return (
     <Layout
       className="site-layout"
-      style={{ marginLeft: state.isCollapsed ? 80 : state.siderWidth }}
+      style={{
+        marginLeft: state.app.ui.sider.isCollapsed
+          ? 80
+          : state.app.ui.sider.width,
+      }}
     >
       <HeaderApp />
       <Content

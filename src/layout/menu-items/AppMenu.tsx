@@ -17,7 +17,7 @@ const AppMenu: FC = () => {
   const { state } = useContext(AppContext);
   return (
     <Menu
-      theme={state.menu.theme}
+      theme={state.app.ui.sider.theme}
       mode="inline"
       defaultSelectedKeys={['1']}
       style={{

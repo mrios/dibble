@@ -15,6 +15,7 @@ import {
   AppContext,
   TOGGLE_MENU,
   CHANGE_LANG,
+  TOGGLE_MENU_THEME,
 } from './../components/app/state/AppContext';
 import BreadcrumbApp from './BreadcrumbApp';
 import { Link } from 'react-router-dom';
@@ -32,14 +33,14 @@ const HeaderApp = () => {
           type: CHANGE_LANG,
           payload: key,
         });
-        i18n.changeLanguage(key);
+        i18n.changeLanguage(key as string);
       }}
     >
       <Menu.ItemGroup title="Select Language">
-        <Menu.Item key="en" className={state.appLang === 'en' ? 'active' : ''}>
+        <Menu.Item key="en" className={state.app.lang === 'en' ? 'active' : ''}>
           English
         </Menu.Item>
-        <Menu.Item key="es" className={state.appLang === 'es' ? 'active' : ''}>
+        <Menu.Item key="es" className={state.app.lang === 'es' ? 'active' : ''}>
           Español
         </Menu.Item>
       </Menu.ItemGroup>
@@ -59,13 +60,13 @@ const HeaderApp = () => {
   return (
     <Header className="site-layout-background site-header">
       {React.createElement(
-        state.isCollapsed ? MenuUnfoldOutlined : MenuFoldOutlined,
+        state.app.ui.sider.isCollapsed ? MenuUnfoldOutlined : MenuFoldOutlined,
         {
           className: 'trigger-menu',
           onClick: () =>
             dispatch({
               type: TOGGLE_MENU,
-              payload: !state.isCollapsed,
+              payload: !state.app.ui.sider.isCollapsed,
             }),
         }
       )}

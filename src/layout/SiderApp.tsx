@@ -10,13 +10,12 @@ const { Sider } = Layout;
 
 const SiderApp: FC = () => {
   const { state } = useContext(AppContext);
-
   return (
     <Sider
       trigger={null}
       collapsible
-      collapsed={state.isCollapsed}
-      width={state.siderWidth}
+      collapsed={state.app.ui.sider.isCollapsed}
+      width={state.app.ui.sider.width}
       style={{
         overflow: 'auto',
         height: '100vh',
@@ -24,9 +23,23 @@ const SiderApp: FC = () => {
         left: 0,
       }}
     >
-      <div className="brand">
-        {state.hasLogoImage ? <div className="logo" /> : <SwapRightOutlined />}
-        <div className="name">{state.appName}</div>
+      <div
+        className="brand"
+        style={{ backgroundColor: state.app.ui.brand.backgroundColor }}
+      >
+        {state.app.ui.brand.imageUrl.length > 0 ? (
+          <img
+            src={state.app.ui.brand.imageUrl}
+            alt="Logo"
+            width="180"
+            height="32"
+          />
+        ) : (
+          <>
+            <SwapRightOutlined />
+            <div className="name">{state.app.name}</div>
+          </>
+        )}
       </div>
       <Switch>
         <Route path="/">
