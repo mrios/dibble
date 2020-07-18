@@ -1,0 +1,124 @@
+{
+  "groups": [
+    {
+      "id": 1,
+      "title": "Alerts",
+      "key": "alerts",
+      "children": [
+        {
+          "id": 1,
+          "key": "AlertDefault",
+          "title": "Alert Default",
+          "isLeaf": true
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Counters",
+      "key": "counters",
+      "children": [
+        {
+          "id": 2,
+          "key": "ProgressCounter",
+          "title": "Progress Counter",
+          "isLeaf": true
+        },
+        {
+          "id": 3,
+          "key": "StatisticDefault",
+          "title": "Statistic Counter",
+          "isLeaf": true
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Dividers",
+      "key": "dividers",
+      "children": [
+        {
+          "id": 4,
+          "key": "DividerDefault",
+          "title": "Divider Default",
+          "isLeaf": true
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Graphs",
+      "key": "graphs",
+      "children": [
+        {
+          "id": 5,
+          "key": "AreaGraph",
+          "title": "Area Graph",
+          "isLeaf": true
+        },
+        {
+          "id": 6,
+          "key": "BarGraph",
+          "title": "Bar Graph",
+          "isLeaf": true
+        },
+        {
+          "id": 7,
+          "key": "BarGroupGraph",
+          "title": "BarGroup Graph",
+          "isLeaf": true
+        },
+        {
+          "id": 8,
+          "key": "LineGraph",
+          "title": "Line Graph",
+          "isLeaf": true
+        },
+        {
+          "id": 9,
+          "key": "PieGraph",
+          "title": "Pie Graph",
+          "isLeaf": true
+        },
+        {
+          "id": 10,
+          "key": "RangeColumnGraph",
+          "title": "Range Column Graph",
+          "isLeaf": true
+        },
+        {
+          "id": 11,
+          "key": "StackedAreaGraph",
+          "title": "Stacked Area Graph",
+          "isLeaf": true
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Tables",
+      "key": "tables",
+      "children": [
+        {
+          "id": 12,
+          "key": "TableDefault",
+          "title": "Table Default",
+          "isLeaf": true
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Timelines",
+      "key": "timelines",
+      "children": [
+        {
+          "id": 13,
+          "key": "TimelineDefault",
+          "title": "Timeline Default",
+          "isLeaf": true
+        }
+      ]
+    }
+  ]
+}

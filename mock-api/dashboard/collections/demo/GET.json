@@ -12,12 +12,11 @@
         {
           "cols": [
             {
-              "title": "Title 1",
+              "title": "Card transparent",
               "span": 5,
               "group": "counters",
               "component": "ProgressCounter",
               "card": {
-                "title": "Card transparent",
                 "transparent": true,
                 "hoverable": false,
                 "style": {
@@ -32,12 +31,11 @@
               }
             },
             {
-              "title": "Title 2",
+              "title": "Card transparent hoverable",
               "span": 5,
               "group": "counters",
               "component": "ProgressCounter",
               "card": {
-                "title": "Card transparent hoverable",
                 "transparent": true,
                 "style": {
                   "width": "100%",
@@ -51,12 +49,11 @@
               }
             },
             {
-              "title": "Title 3",
+              "title": "Counter card",
               "span": 5,
               "group": "counters",
               "component": "ProgressCounter",
               "card": {
-                "title": "Counter card",
                 "transparent": true
               },
               "iterable": true,
@@ -88,8 +85,9 @@
               ]
             },
             {
-              "title": "Title 4",
-              "span": 9,
+              "title": "Line Graph",
+              "span": 8,
+              "offset": 1,
               "group": "graphs",
               "component": "LineGraph",
               "data": {
@@ -99,9 +97,7 @@
                 }
               },
               "card": {
-                "title": "Line Graph",
                 "extra": "Info",
-
                 "hoverable": false
               }
             }
@@ -127,19 +123,16 @@
               "group": "tables",
               "component": "TableDefault",
               "card": {
-                "title": "Table Example",
                 "transparent": true,
                 "extra": "> Go to users list"
               }
             },
             {
-              "title": "Graph 1",
+              "title": "Graph Example",
               "span": 12,
               "group": "graphs",
               "component": "LineGraph",
-              "card": {
-                "title": "Graph Example"
-              }
+              "card": {}
             }
           ]
         }
@@ -148,10 +141,14 @@
     {
       "order": 2,
       "title": "Counters",
-      "background": {
-        "type": "pattern",
-        "color": "#ffffff",
-        "url": "data:image/svg+xml,%3Csvg width='84' height='48' viewBox='0 0 84 48' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h12v6H0V0zm28 8h12v6H28V8zm14-8h12v6H42V0zm14 0h12v6H56V0zm0 8h12v6H56V8zM42 8h12v6H42V8zm0 16h12v6H42v-6zm14-8h12v6H56v-6zm14 0h12v6H70v-6zm0-16h12v6H70V0zM28 32h12v6H28v-6zM14 16h12v6H14v-6zM0 24h12v6H0v-6zm0 8h12v6H0v-6zm14 0h12v6H14v-6zm14 8h12v6H28v-6zm-14 0h12v6H14v-6zm28 0h12v6H42v-6zm14-8h12v6H56v-6zm0-8h12v6H56v-6zm14 8h12v6H70v-6zm0 8h12v6H70v-6zM14 24h12v6H14v-6zm14-8h12v6H28v-6zM14 8h12v6H14V8zM0 8h12v6H0V8z' fill='%235a5fea' fill-opacity='0.09' fill-rule='evenodd'/%3E%3C/svg%3E"
+      "meta": {
+        "header": {
+          "background": {
+            "type": "pattern",
+            "color": "#ffffff",
+            "url": "data:image/svg+xml,%3Csvg width='84' height='48' viewBox='0 0 84 48' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h12v6H0V0zm28 8h12v6H28V8zm14-8h12v6H42V0zm14 0h12v6H56V0zm0 8h12v6H56V8zM42 8h12v6H42V8zm0 16h12v6H42v-6zm14-8h12v6H56v-6zm14 0h12v6H70v-6zm0-16h12v6H70V0zM28 32h12v6H28v-6zM14 16h12v6H14v-6zM0 24h12v6H0v-6zm0 8h12v6H0v-6zm14 0h12v6H14v-6zm14 8h12v6H28v-6zm-14 0h12v6H14v-6zm28 0h12v6H42v-6zm14-8h12v6H56v-6zm0-8h12v6H56v-6zm14 8h12v6H70v-6zm0 8h12v6H70v-6zM14 24h12v6H14v-6zm14-8h12v6H28v-6zM14 8h12v6H14V8zM0 8h12v6H0V8z' fill='%235a5fea' fill-opacity='0.09' fill-rule='evenodd'/%3E%3C/svg%3E"
+          }
+        }
       },
       "rows": [
         {
@@ -221,21 +218,23 @@
     {
       "order": 3,
       "title": "Graphs",
-      "background": {
-        "type": "image",
-        "url": "https://png.pngtree.com/thumb_back/fw800/back_our/20190625/ourmid/pngtree-flat-solid-geometry-corporate-company-ppt-background-image_260522.jpg"
+      "meta": {
+        "header": {
+          "background": {
+            "type": "image",
+            "url": "https://png.pngtree.com/thumb_back/fw800/back_our/20190625/ourmid/pngtree-flat-solid-geometry-corporate-company-ppt-background-image_260522.jpg"
+          }
+        }
       },
       "rows": [
         {
           "cols": [
             {
-              "title": "Graph 1",
+              "title": "Line Graph",
               "span": 12,
               "group": "graphs",
               "component": "LineGraph",
-              "card": {
-                "title": "Line Graph"
-              },
+              "card": {},
               "data": {
                 "percent": 75,
                 "successPercent": 25,
@@ -243,13 +242,11 @@
               }
             },
             {
-              "title": "Graph 2",
+              "title": "Area Graph",
               "span": 12,
               "group": "graphs",
               "component": "AreaGraph",
-              "card": {
-                "title": "Area Graph"
-              },
+              "card": {},
               "data": {
                 "percent": 75,
                 "successPercent": 25,
@@ -263,9 +260,13 @@
     {
       "order": 4,
       "title": "Dividers",
-      "background": {
-        "type": "solid",
-        "color": "lightskyblue"
+      "meta": {
+        "header": {
+          "background": {
+            "type": "solid",
+            "color": "lightskyblue"
+          }
+        }
       },
       "rows": [
         {
@@ -313,6 +314,198 @@
                 "text": "Text divider [ right ]",
                 "type": "horizontal",
                 "orientation": "right"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 5,
+      "title": "Alerts",
+      "rows": [
+        {
+          "title": "Alert",
+          "span": 24,
+          "group": "alerts",
+          "component": "AlertDefault",
+          "data": {
+            "type": "info",
+            "message": "Some message",
+            "description": "This is a long description trying to fill the gap... not sure... maybe now!",
+            "closable": true,
+            "showIcon": true,
+            "contrast": true
+          }
+        },
+        {
+          "title": "Alert",
+          "span": 24,
+          "group": "alerts",
+          "component": "AlertDefault",
+          "data": {
+            "type": "info",
+            "message": "Some message",
+            "description": "This is a long description trying to fill the gap... not sure... maybe now!",
+            "closable": true,
+            "showIcon": true
+          }
+        },
+        {
+          "title": "Alert",
+          "span": 24,
+          "group": "alerts",
+          "component": "AlertDefault",
+          "data": {
+            "type": "warning",
+            "message": "Some message",
+            "description": "This is a long description trying to fill the gap... not sure... maybe now!",
+            "closable": true,
+            "showIcon": true,
+            "contrast": true
+          }
+        },
+        {
+          "title": "Alert",
+          "span": 24,
+          "group": "alerts",
+          "component": "AlertDefault",
+          "data": {
+            "type": "warning",
+            "message": "Some message",
+            "description": "This is a long description trying to fill the gap... not sure... maybe now!",
+            "closable": true,
+            "showIcon": true
+          }
+        },
+        {
+          "title": "Alert",
+          "span": 24,
+          "group": "alerts",
+          "component": "AlertDefault",
+          "data": {
+            "type": "error",
+            "message": "Some message",
+            "description": "This is a long description trying to fill the gap... not sure... maybe now!",
+            "closable": true,
+            "showIcon": true,
+            "contrast": true
+          }
+        },
+        {
+          "title": "Alert",
+          "span": 24,
+          "group": "alerts",
+          "component": "AlertDefault",
+          "data": {
+            "type": "error",
+            "message": "Some message",
+            "description": "This is a long description trying to fill the gap... not sure... maybe now!",
+            "closable": true,
+            "showIcon": true
+          }
+        },
+        {
+          "title": "Alert",
+          "span": 24,
+          "group": "alerts",
+          "component": "AlertDefault",
+          "data": {
+            "type": "success",
+            "message": "Some message",
+            "description": "This is a long description trying to fill the gap... not sure... maybe now!",
+            "closable": true,
+            "showIcon": true,
+            "contrast": true
+          }
+        },
+        {
+          "title": "Alert",
+          "span": 24,
+          "group": "alerts",
+          "component": "AlertDefault",
+          "data": {
+            "type": "success",
+            "message": "Some message",
+            "description": "This is a long description trying to fill the gap... not sure... maybe now!",
+            "closable": true,
+            "showIcon": true
+          }
+        }
+      ]
+    },
+    {
+      "order": 6,
+      "title": "Timelines",
+      "rows": [
+        {
+          "cols": [
+            {
+              "title": "Timeline in card [styled, mode:alternate]",
+              "span": 12,
+              "group": "timelines",
+              "component": "TimelineDefault",
+              "card": {
+                "extra": "Details...",
+                "style": {
+                  "width": "95%",
+                  "textAlign": "center",
+                  "margin": "2.5%"
+                }
+              },
+              "data": {
+                "mode": "alternate",
+                "items": [
+                  {
+                    "text": "Text 1 2020-05-04"
+                  },
+                  {
+                    "text": "Long long text............... 2020-05-20"
+                  },
+                  {
+                    "text": "Text 1 2020-05-04"
+                  },
+                  {
+                    "text": "Long long text............... 2020-05-20"
+                  },
+                  {
+                    "text": "Text 1 2020-05-04"
+                  },
+                  {
+                    "text": "Long long text............... 2020-05-20"
+                  }
+                ]
+              }
+            },
+            {
+              "title": "Timeline in card [mode:default]",
+              "span": 12,
+              "group": "timelines",
+              "component": "TimelineDefault",
+              "card": {
+                "extra": "Details..."
+              },
+              "data": {
+                "items": [
+                  {
+                    "text": "Text 1 2020-05-04"
+                  },
+                  {
+                    "text": "Long long text............... 2020-05-20"
+                  },
+                  {
+                    "text": "Text 1 2020-05-04"
+                  },
+                  {
+                    "text": "Long long text............... 2020-05-20"
+                  },
+                  {
+                    "text": "Text 1 2020-05-04"
+                  },
+                  {
+                    "text": "Long long text............... 2020-05-20"
+                  }
+                ]
               }
             }
           ]

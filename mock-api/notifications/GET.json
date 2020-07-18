@@ -1,0 +1,51 @@
+{
+  "user_messages": [
+    {
+      "id": "49ea6525",
+      "type": "message",
+      "tags": ["send"],
+      "from": "user1@dibble.tech",
+      "to": "admin@dibble.tech",
+      "subject": "Question",
+      "body": "Can you tell me how to..."
+    },
+    {
+      "id": "49ea6526",
+      "type": "message",
+      "tags": ["replay"],
+      "from": "admin@dibble.tech",
+      "to": "user1@dibble.tech",
+      "subject": "Re: Question",
+      "body": "Yes, you have to..."
+    },
+    {
+      "id": "49ea6527",
+      "type": "message",
+      "tags": [],
+      "from": "user1@dibble.tech",
+      "to": "admin@dibble.tech",
+      "subject": "Re: Question",
+      "body": "Thanks!"
+    }
+  ],
+  "app_messages": [
+    {
+      "id": "49ea6528",
+      "type": "reminder",
+      "tags": ["reminder"],
+      "from": "course.manager@dibble.tech",
+      "to": "user1@dibble.tech, user2@dibble.tech, user3@dibble.tech, user4@dibble.tech",
+      "subject": "Reminder",
+      "body": "This is a friendly reminder..."
+    },
+    {
+      "id": "49ea6529",
+      "type": "offer",
+      "tags": ["offer", "course"],
+      "from": "sell.manager@dibble.tech",
+      "to": "user1@dibble.tech, user2@dibble.tech, user3@dibble.tech, user4@dibble.tech",
+      "subject": "There is a special offer for you!",
+      "body": "Hi, this is a special opportunity to..."
+    }
+  ]
+}
