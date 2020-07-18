@@ -18,8 +18,8 @@ interface DashboardTemplateProps {
   data: any;
 }
 const DashboardOnDemand = (props: DashboardTemplateProps) => {
-  const { t, i18n } = useTranslation();
-  const { state, dispatch } = useContext(AppContext);
+  const { i18n } = useTranslation();
+  const { dispatch } = useContext(AppContext);
   const [backgroundHeader, setBackgroundHeader] = useState(
     props.data?.datasets?.[0]?.meta?.header?.background || 'inherit'
   );
@@ -27,8 +27,8 @@ const DashboardOnDemand = (props: DashboardTemplateProps) => {
     props.data?.datasets?.[0]?.meta?.body?.background || 'inherit'
   );
   const [theme, setTheme] = useState(props?.data?.theme || 'light');
-  const onChangeTab = (activeKey: any) => {
-    const dataset = props.data.datasets?.[activeKey - 1];
+  const onChangeTab = (activeKey: string) => {
+    const dataset = props.data.datasets?.[parseInt(activeKey) - 1];
     setBackgroundHeader(
       dataset?.meta?.header?.background
         ? dataset.meta.header.background

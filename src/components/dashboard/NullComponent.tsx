@@ -1,6 +1,6 @@
 import React from 'react';
 
-const NullComponent = (props: any) => {
+const NullComponent = () => {
   return <div>...</div>;
 };
 

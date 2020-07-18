@@ -39,9 +39,13 @@ export const getFilterFunctionsBySearchFilters = (
 export const isAValidString = (value: string, min: number = 0) =>
   value && (value as string).length > min;
 
-export const stringIncludes = (propertyValue: any, value: string) =>
+export const stringIncludes = (propertyValue: string, value: string) =>
   propertyValue.toLowerCase().includes(value.toLowerCase());
 
-export const getStringIncludesFunction = (property: string, value: string) => (
-  entity: any
-) => stringIncludes(entity[property], value);
+export type Entity = {
+  [key: string]: string;
+};
+export const getStringIncludesFunction = (
+  property: keyof Entity,
+  value: string
+) => (entity: Entity) => stringIncludes(entity[property], value);

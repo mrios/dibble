@@ -1,6 +1,6 @@
 import React from 'react';
 
-const BarGraph = (props: any) => {
+const BarGraph = () => {
   return <div>Bar graph</div>;
 };
 

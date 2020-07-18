@@ -24,7 +24,7 @@ export function useComponentFacade(): [ComponentState, ComponentActionsState] {
   useEffect(() => {
     const subscriptions: Subscription[] = [
       onEmit<{}>(componentQuery.select('groups'), (data) => {
-        setState((stateComponent: any) => {
+        setState((stateComponent: ComponentState) => {
           return { ...stateComponent, groups: data };
         });
       }),

@@ -11,7 +11,7 @@ export interface Role {
 }
 
 export function createRole(params: Partial<Role>) {
-  const newRole: any = {
+  const newRole: Partial<Role> = {
     ...params,
     id: guid(),
     createdAt: moment(new Date()),

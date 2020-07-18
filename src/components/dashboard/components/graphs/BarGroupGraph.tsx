@@ -1,6 +1,6 @@
 import React from 'react';
 
-const BarGroupGraph = (props: any) => {
+const BarGroupGraph = () => {
   return <div>BarGroup graph</div>;
 };
 

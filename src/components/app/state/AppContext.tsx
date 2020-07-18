@@ -100,7 +100,7 @@ const toggleMenuTheme = (payload: Object, state: StateAppType) => {
   };
 };
 
-export const appReducer = (state: any, action: ActionType) => {
+export const appReducer = (state: StateAppType, action: ActionType) => {
   switch (action.type) {
     case TOGGLE_MENU:
       return toggleMenu(action.payload, state);

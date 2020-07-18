@@ -14,7 +14,7 @@ const templates: ObjectStringType = {
   'on-demand-tabs-left': 'DashboardOnDemandTabsLeft',
 };
 
-const Dashboard = (props: any) => {
+const Dashboard = () => {
   const { id } = useParams();
   const [stateDashboard] = useDashboardFacade({ id: id });
 

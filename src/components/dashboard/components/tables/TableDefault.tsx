@@ -5,7 +5,7 @@ import { Tag } from 'antd';
 import { useUsersFacade } from '../../../users/state';
 import ListBasic from '../../../common/list/ListBasic';
 
-const TableDefault = (props: any) => {
+const TableDefault = () => {
   const { t } = useTranslation();
   const [{ users }] = useUsersFacade();
   const columns: ColumnsType<{}> = [

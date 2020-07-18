@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Settings = (props: any) => {
+const Settings = () => {
   return <div>Settings</div>;
 };
 

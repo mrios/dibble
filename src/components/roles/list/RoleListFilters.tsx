@@ -58,5 +58,4 @@ const RoleListFilters = (props: FilterProps) => {
   );
 };
 
-RoleListFilters.propTypes = {};
 export default RoleListFilters;

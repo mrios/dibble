@@ -4,14 +4,8 @@ import { Component } from './component.model';
 export interface ComponentState extends EntityState<Component> {}
 
 @StoreConfig({
-  name: 'component'
+  name: 'component',
 })
-export class ComponentStore extends EntityStore<ComponentState> {
-
-  constructor() {
-    super();
-  }
-
-}
+export class ComponentStore extends EntityStore<ComponentState> {}
 
 export const componentStore = new ComponentStore();

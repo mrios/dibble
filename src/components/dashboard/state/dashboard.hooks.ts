@@ -32,7 +32,7 @@ export function useDashboardFacade(
   useEffect(() => {
     const subscriptions: Subscription[] = [
       onEmit<{}>(dashboardQuery.select('data'), (data) => {
-        setState((stateDashboard: any) => {
+        setState((stateDashboard: DashboardState) => {
           return { ...stateDashboard, data: data };
         });
       }),

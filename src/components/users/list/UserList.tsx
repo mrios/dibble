@@ -11,7 +11,7 @@ import { useTranslation } from 'react-i18next';
 
 const UserList = () => {
   const { t } = useTranslation();
-  const [{ users, filter }, actions] = useUsersFacade();
+  const [{ users }, actions] = useUsersFacade();
   let history = useHistory();
 
   const toggleActive = (user: User) => {

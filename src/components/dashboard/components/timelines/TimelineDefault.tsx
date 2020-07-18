@@ -3,12 +3,14 @@ import { Timeline } from 'antd';
 import { ClockCircleOutlined } from '@ant-design/icons';
 
 type TimelineModeType = 'alternate' | 'left' | 'right';
+type TimelineItemProps = {
+  text: string;
+  color?: string;
+  dot?: boolean;
+};
 type TimelineProps = {
   mode: TimelineModeType;
-  items: Array<{
-    text: string;
-    color?: string;
-  }>;
+  items: TimelineItemProps[];
 };
 
 const dotIcon = (
@@ -16,9 +18,10 @@ const dotIcon = (
     style={{ fontSize: '16px', color: 'orange', background: 'transparent' }}
   />
 );
+
 const TimelineDefault = (props: TimelineProps) => (
   <Timeline mode={props.mode}>
-    {props?.items?.map((item: any, i: number) => (
+    {props?.items?.map((item: TimelineItemProps, i: number) => (
       <Timeline.Item
         color={item.color}
         dot={item.dot ? dotIcon : undefined}

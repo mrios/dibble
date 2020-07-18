@@ -1,7 +1,6 @@
 import React, { lazy } from 'react';
 import { Spin } from 'antd';
 import { LoadingOutlined } from '@ant-design/icons';
-// import moduleName from './templates/DashboardOnDemand'
 
 interface RenderItemProps {
   template: string;

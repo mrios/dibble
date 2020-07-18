@@ -7,10 +7,12 @@ import { useComponentFacade } from './components/state/component.hooks';
 import ComponentSelector from './designer/ComponentSelector';
 import Workspace from './designer/Workspace';
 
-const DashboardDesigner = (props: any) => {
+const DashboardDesigner = () => {
   const { t } = useTranslation();
   const { dispatch } = useContext(AppContext);
-  const [components, setComponents] = useState({} as { [key: string]: any });
+  const [components, setComponents] = useState(
+    {} as { [key: string]: React.Component }
+  );
   const [stateComponent] = useComponentFacade();
   const [activeComponent, setActiveComponent] = useState('');
 
@@ -22,17 +24,33 @@ const DashboardDesigner = (props: any) => {
     });
   }, []);
 
-  const importView = ({ group, component }: any) =>
+  type ViewProps = {
+    group: string;
+    component: string;
+  };
+
+  const importView = ({ group, component }: ViewProps) =>
     lazy(() =>
       import(`./components/${group}/${component}`).catch(() =>
         import('./NullComponent')
       )
     );
 
+  type ChildrenType = {
+    id: number;
+    key: string;
+    title: string;
+    isLeaf: boolean;
+  };
+  type GroupType = {
+    children: ChildrenType[];
+    key: string;
+  };
+
   useEffect(() => {
     // Load all components (Is this convenient?)
-    stateComponent?.groups?.forEach((group: any, i: number) => {
-      group?.children?.forEach((c: any, j: number) => {
+    stateComponent?.groups?.forEach((group: GroupType, i: number) => {
+      group?.children?.forEach((c: ChildrenType, j: number) => {
         const newComponent = importView({
           group: group.key,
           component: c.key,
@@ -42,7 +60,7 @@ const DashboardDesigner = (props: any) => {
     });
   }, [components, stateComponent.groups]);
 
-  const onSelect = (keys: any, event: any) => {
+  const onSelect = (keys: Array<string>, event: Event) => {
     keys.map(setActiveComponent);
   };
 
@@ -61,5 +79,4 @@ const DashboardDesigner = (props: any) => {
   );
 };
 
-DashboardDesigner.propTypes = {};
 export default DashboardDesigner;

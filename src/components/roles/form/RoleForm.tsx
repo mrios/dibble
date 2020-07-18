@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next';
 
 const { Title } = Typography;
 
-const RoleForm = (props: any) => {
+const RoleForm = () => {
   const [{ active }, actions] = useRolesFacade();
   const [form] = Form.useForm();
   const { id } = useParams();
@@ -65,5 +65,4 @@ const RoleForm = (props: any) => {
   );
 };
 
-RoleForm.propTypes = {};
 export default RoleForm;

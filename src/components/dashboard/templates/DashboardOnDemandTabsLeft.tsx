@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import HeaderContent from '../../../layout/HeaderContent';
-import { useTranslation } from 'react-i18next';
 import { Row, Tabs, Space } from 'antd';
 import LoadComponent from '../LoadComponent';
 
@@ -8,7 +7,6 @@ interface DashboardTemplateProps {
   data: any;
 }
 const DashboardOnDemandTabsLeft = (props: DashboardTemplateProps) => {
-  const { t } = useTranslation();
   const [backgroundHeader, setBackgroundHeader] = useState(
     props.data && props.data.datasets[0] && props.data.datasets[0].background
   );

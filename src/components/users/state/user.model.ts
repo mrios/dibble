@@ -14,7 +14,7 @@ export interface User {
 }
 
 export function createUser(params: Partial<User>) {
-  const newUser: any = {
+  const newUser: Partial<User> = {
     ...params,
     id: guid(),
     password: params.password ? params.password : params.username,

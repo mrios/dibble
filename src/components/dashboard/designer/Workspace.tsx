@@ -1,6 +1,7 @@
 import React, { FC, useState, useEffect } from 'react';
 import { Row, Col, Card, Switch, Radio, Form } from 'antd';
 import WorkspaceOptions from './WorkspaceOptions';
+import { useTranslation } from 'react-i18next';
 
 interface WorkspaceProps {
   component: any;
@@ -22,6 +23,7 @@ const defaultCardProps = {
 };
 
 const Workspace: FC<WorkspaceProps> = (props) => {
+  const { t } = useTranslation();
   const [workspaceTheme, setWorkspaceTheme] = useState(
     props?.data?.theme || 'light'
   );
@@ -47,14 +49,21 @@ const Workspace: FC<WorkspaceProps> = (props) => {
   return (
     <Row>
       <Col span={19}>
-        <h3 className="section-header">Preview</h3>
+        <h3 className="section-header">
+          {t('dashboard:designer.preview.title')}
+        </h3>
         <Row className="toolbar-min">
           <Col offset="1">
             <Form layout="inline">
-              <h3 className="section-header">Workspace</h3>
-              <Form.Item name="workspaceTheme" label="Theme">
+              <h3 className="section-header">
+                {t('dashboard:designer.workspace')}
+              </h3>
+              <Form.Item
+                name="workspaceTheme"
+                label={t('dashboard:designer.preview.theme')}
+              >
                 <Switch
-                  defaultChecked={workspaceTheme === 'light'}
+                  checked={workspaceTheme === 'light'}
                   checkedChildren="light"
                   unCheckedChildren="dark"
                   onChange={(value) =>

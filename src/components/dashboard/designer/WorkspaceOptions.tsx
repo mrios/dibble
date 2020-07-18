@@ -39,7 +39,7 @@ const WorkspaceOptions: FC<WorkspaceOptionsProps> = (props) => {
     if (props.card) {
       form.setFieldsValue(props.card);
     }
-  }, [form, active, actions]);
+  }, [form, active, actions, props.card]);
 
   const optionsAlignText = [
     { label: 'start', value: 'start' },
@@ -78,7 +78,7 @@ const WorkspaceOptions: FC<WorkspaceOptionsProps> = (props) => {
                 min={6}
                 max={24}
                 defaultValue={props?.card?.span || 18}
-                onChange={(value: any) => updateField('span', value)}
+                onChange={(value: number) => updateField('span', value)}
               />
             </Form.Item>
             <Form.Item
@@ -89,7 +89,7 @@ const WorkspaceOptions: FC<WorkspaceOptionsProps> = (props) => {
                 min={0}
                 max={6}
                 defaultValue={props?.card?.offset || 0}
-                onChange={(value: any) => updateField('offset', value)}
+                onChange={(value: number) => updateField('offset', value)}
               />
             </Form.Item>
             <Form.Item name="title" label="Title">
@@ -101,20 +101,20 @@ const WorkspaceOptions: FC<WorkspaceOptionsProps> = (props) => {
             </Form.Item>
             <Form.Item name="transparent" label="Transparent">
               <Switch
-                defaultChecked={props?.card?.transparent || false}
+                checked={props?.card?.transparent || false}
                 checkedChildren="yes"
                 unCheckedChildren="no"
                 size="small"
-                onChange={(value: any) => updateField('transparent', value)}
+                onChange={(value: boolean) => updateField('transparent', value)}
               />
             </Form.Item>
             <Form.Item name="hoverable" label="Hoverable">
               <Switch
-                defaultChecked={props?.card?.hoverable || false}
+                checked={props?.card?.hoverable || false}
                 checkedChildren="yes"
                 unCheckedChildren="no"
                 size="small"
-                onChange={(value: any) => updateField('hoverable', value)}
+                onChange={(value: boolean) => updateField('hoverable', value)}
               />
             </Form.Item>
             <Form.Item name="style.alignText" label="Align content">
@@ -122,7 +122,7 @@ const WorkspaceOptions: FC<WorkspaceOptionsProps> = (props) => {
                 defaultValue={props?.card?.style?.alignText || 'center'}
                 options={optionsAlignText}
                 onChange={(el) =>
-                  updateField('style.alignText', el.target.value)
+                  updateField('style', { alignText: el.target.value })
                 }
                 value={props?.card?.style?.alignText || 'center'}
                 optionType="button"

@@ -1,8 +1,7 @@
 import React from 'react';
 
-const PieGraph = (props: any) => {
+const PieGraph = () => {
   return <div>Pie graph</div>;
 };
 
-PieGraph.propTypes = {};
 export default PieGraph;
