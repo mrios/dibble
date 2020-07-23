@@ -1,0 +1,190 @@
+{
+  "breadcrumb": {
+    "home": "Home",
+    "reports": "Reports",
+    "dashboard": {
+      "group": "Dashboard",
+      "demo": "Demo [Preview]",
+      "designer": "Designer"
+    },
+    "notifications": "Notifications",
+    "docs": {
+      "group": "Docs",
+      "app": "App Docs",
+      "api": "API Docs"
+    },
+    "settings": {
+      "group": "Settings",
+      "users": {
+        "users": "Users",
+        "edit": "Edit",
+        "new": "New"
+      },
+      "roles": {
+        "roles": "Roles",
+        "edit": "Edit",
+        "new": "New"
+      }
+    }
+  },
+  "config": {
+    "list": {
+      "reload": "Reload",
+      "reset": "Reset"
+    }
+  },
+  "dashboard": {
+    "admin": {
+      "select_template": "Select template"
+    },
+    "designer": {
+      "preview": {
+        "title": "Preview",
+        "theme": "Theme",
+        "justify": "Justify"
+      },
+      "components": "Components",
+      "workspace": "Workspace",
+      "options": {
+        "title": "Options",
+        "card": "Card",
+        "component": "Component"
+      }
+    }
+  },
+  "header": {
+    "sign_out": "Sign out",
+    "profile": "Profile",
+    "content": {
+      "home": "Home",
+      "docs": "App Documentation",
+      "reports": "Reports",
+      "dashboard": "Dashboard",
+      "notifications": "Notifications"
+    }
+  },
+  "menu": {
+    "home": "Home",
+    "docs": {
+      "group": "Docs",
+      "app": "App Docs",
+      "api": "API Docs"
+    },
+    "dashboard": {
+      "group": "Dashboard",
+      "demo": "Demo",
+      "designer": "Designer"
+    },
+    "reports": "Reports",
+    "notifications": "Notifications",
+    "settings": {
+      "group": "Settings",
+      "users": "Users",
+      "roles": "Roles"
+    }
+  },
+  "settings": {
+    "roles": {
+      "list": {
+        "name": "Name",
+        "description": "Description",
+        "active": "Status",
+        "status": {
+          "active": "active",
+          "inactive": "not active"
+        },
+        "createdAt": "Created At",
+        "operations": "Actions",
+        "actions": {
+          "edit": "Edit",
+          "remove": "Remove"
+        },
+        "filters": {
+          "name": "Name",
+          "name_placeholder": "A name...",
+          "description": "Description",
+          "description_placeholder": "A Description...",
+          "actions": {
+            "search": "Search",
+            "add": "Add"
+          }
+        }
+      },
+      "form": {
+        "title": "Role Form",
+        "name": "Name",
+        "name_placeholder": "A name...",
+        "description": "Description",
+        "description_placeholder": "A Description...",
+        "active": "Active",
+        "actions": {
+          "reset": "Reset",
+          "submit": "Submit"
+        }
+      },
+      "admin": {
+        "list": {
+          "filters": {
+            "title": "Admin filters",
+            "all": "All",
+            "active": "Active"
+          }
+        }
+      }
+    },
+    "users": {
+      "list": {
+        "username": "Username",
+        "first_name": "First Name",
+        "last_name": "Last Name",
+        "active": "Status",
+        "status": {
+          "active": "active",
+          "inactive": "not active"
+        },
+        "createdAt": "Created At",
+        "operations": "Actions",
+        "actions": {
+          "edit": "Edit",
+          "remove": "Remove"
+        },
+        "filters": {
+          "username": "Username",
+          "username_placeholder": "Username...",
+          "first_name": "First Name",
+          "first_name_placeholder": "First name...",
+          "last_name": "Last Name",
+          "last_name_placeholder": "Last name...",
+          "name_placeholder": "Name...",
+          "actions": {
+            "search": "Search",
+            "add": "Add"
+          }
+        }
+      },
+      "form": {
+        "title": "User Form",
+        "username": "Username",
+        "username_placeholder": "Username...",
+        "first_name": "First Name",
+        "first_name_placeholder": "First name...",
+        "last_name": "Last Name",
+        "last_name_placeholder": "Last name...",
+        "active": "Active",
+        "actions": {
+          "reset": "Reset",
+          "submit": "Submit"
+        }
+      },
+      "admin": {
+        "list": {
+          "filters": {
+            "title": "Admin filters",
+            "all": "All",
+            "active": "Active"
+          }
+        }
+      }
+    }
+  }
+}

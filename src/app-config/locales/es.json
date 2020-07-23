@@ -1,0 +1,189 @@
+{
+  "breadcrumb": {
+    "home": "Inicio",
+    "reports": "Reportes",
+    "dashboard": {
+      "group": "Panel de indicadores",
+      "demo": "Demo",
+      "designer": "Diseñador"
+    },
+    "notifications": "Notificationes",
+    "docs": {
+      "group": "Docs",
+      "app": "Docs de la APP",
+      "api": "Docs de la API"
+    },
+    "settings": {
+      "group": "Configuración",
+      "users": {
+        "users": "Usuarios",
+        "edit": "Editar",
+        "new": "Nuevo"
+      },
+      "roles": {
+        "roles": "Roles",
+        "edit": "Editar",
+        "new": "Nuevo"
+      }
+    }
+  },
+  "config": {
+    "list": {
+      "reload": "Recargar",
+      "reset": "Resetear"
+    }
+  },
+  "dashboard": {
+    "admin": {
+      "select_template": "Seleccionar template"
+    },
+    "designer": {
+      "preview": {
+        "title": "Vista previa",
+        "theme": "Tema",
+        "justify": "Justificar"
+      },
+      "components": "Componentes",
+      "workspace": "Espacio de trabajo",
+      "options": {
+        "title": "Opciones",
+        "card": "Tarjeta",
+        "component": "Componente"
+      }
+    }
+  },
+  "header": {
+    "sign_out": "Salir",
+    "profile": "Perfil",
+    "content": {
+      "home": "Inicio",
+      "docs": "Documentacion App",
+      "reports": "Reportes",
+      "dashboard": "Panel de indicadores",
+      "notifications": "Notificationes"
+    }
+  },
+  "menu": {
+    "home": "Inicio",
+    "docs": {
+      "group": "Docs",
+      "app": "Docs de la APP",
+      "api": "Docs de la API"
+    },
+    "dashboard": {
+      "group": "Indicadores",
+      "demo": "Demo",
+      "designer": "Diseñador"
+    },
+    "reports": "Reportes",
+    "notifications": "Notificaciones",
+    "settings": {
+      "group": "Configuracion",
+      "users": "Usuarios",
+      "roles": "Roles"
+    }
+  },
+  "settings": {
+    "roles": {
+      "list": {
+        "name": "Nombre",
+        "description": "Descripcion",
+        "active": "Estado",
+        "status": {
+          "active": "activo",
+          "inactive": "no activo"
+        },
+        "createdAt": "Creado En",
+        "operations": "Acciones",
+        "actions": {
+          "edit": "Editar",
+          "remove": "Eliminar"
+        },
+        "filters": {
+          "name": "Nombre",
+          "name_placeholder": "Nombre...",
+          "description": "Descripcion",
+          "description_placeholder": "Una descripcion...",
+          "actions": {
+            "search": "Buscar",
+            "add": "Agregar"
+          }
+        }
+      },
+      "form": {
+        "title": "Formulario de Rol",
+        "name": "Nombre",
+        "name_placeholder": "Nombre...",
+        "description": "Descripcion",
+        "description_placeholder": "Una descripcion...",
+        "active": "Activo",
+        "actions": {
+          "reset": "Resetear",
+          "submit": "Guardar"
+        }
+      },
+      "admin": {
+        "list": {
+          "filters": {
+            "title": "Filtros de admin",
+            "all": "Todos",
+            "active": "Activos"
+          }
+        }
+      }
+    },
+    "users": {
+      "list": {
+        "username": "Nombre de usuario",
+        "first_name": "Nombre",
+        "last_name": "Apellido",
+        "active": "Activo",
+        "status": {
+          "active": "activo",
+          "inactive": "inactivo"
+        },
+        "createdAt": "Creado En",
+        "operations": "Acciones",
+        "actions": {
+          "edit": "Editar",
+          "remove": "Eliminar"
+        },
+        "filters": {
+          "username": "Usuario",
+          "username_placeholder": "Usuario...",
+          "first_name": "Nombre",
+          "first_name_placeholder": "Nombre...",
+          "last_name": "Apellido",
+          "last_name_placeholder": "Apellido...",
+          "actions": {
+            "search": "Buscar",
+            "add": "Agregar"
+          }
+        }
+      },
+      "form": {
+        "title": "Formulario de Usuario",
+        "username": "Usuario",
+        "username_placeholder": "Usuario...",
+        "first_name": "Nombre",
+        "first_name_placeholder": "Nombre...",
+        "last_name": "Apellido",
+        "last_name_placeholder": "Apellido...",
+        "active": "Activo",
+        "actions": {
+          "reset": "Resetear",
+          "submit": "Guardar"
+        }
+      },
+      "admin": {
+        "list": {
+          "filters": {
+            "title": "Filtros de Admin",
+            "all": "Todos",
+            "active": "Activo"
+          }
+        }
+      }
+    }
+  }
+}
