@@ -1,2 +1,2 @@
 # dibble
-A webapp template usign: React, Typescript, Akita, RxJs, Antd, Jest and Swagger
+A webapp template using: React, Typescript, Akita, RxJs, Antd, Jest and Swagger
